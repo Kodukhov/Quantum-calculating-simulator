@@ -1,0 +1,322 @@
+#pragma once
+#define M_PI 3.14159265358979323846
+
+void operNOT(int numq, int numop)
+{
+	double A = l / 2;
+	double b = l / 8;
+	double c = 3 * l / 16;
+	double ot = l / 4;
+
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	if (numq == 1) {
+		y_0 = 600 - verot - l;
+	}
+	if (numq == 2) {
+		y_0 = 100 + verot;
+	}
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + l);
+	glVertex2i(x0 + l, y_0 + l);
+	glVertex2i(x0 + l, y_0);
+	glEnd();
+
+	x0 = x0 + ot;
+	y_0 = y_0 + ot;
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0 + b, y_0);
+	glVertex2i(x0 + A, y_0 + A);
+	glVertex2i(x0 + A - b, y_0 + A);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0 + A);
+	glVertex2i(x0 + b, y_0 + A);
+	glVertex2i(x0 + A, y_0);
+	glVertex2i(x0 + A - b, y_0);
+	glEnd();
+}
+void operH(int numq, int numop)
+{
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	if (numq == 1) {
+		y_0 = 600 - verot - l;
+	}
+	if (numq == 2) {
+		y_0 = 100 + verot;
+	}
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + l);
+	glVertex2i(x0 + l, y_0 + l);
+	glVertex2i(x0 + l, y_0);
+	glEnd();
+
+	double ot = l / 5;
+	double A = 3 * l / 5;
+	x0 = x0 + 3 * ot / 2;
+	y_0 = y_0 + ot;
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0 + ot / 2, y_0);
+	glVertex2i(x0 + ot / 2, y_0 + A);
+	glVertex2i(x0, y_0 + A);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0 + 3 * ot / 2, y_0);
+	glVertex2i(x0 + 2 * ot, y_0);
+	glVertex2i(x0 + 2 * ot, y_0 + A);
+	glVertex2i(x0 + 3 * ot / 2, y_0 + A);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0 + A / 2 - ot / 4);
+	glVertex2i(x0 + 2 * ot, y_0 + A / 2 - ot / 4);
+	glVertex2i(x0 + 2 * ot, y_0 + A / 2 + ot / 4);
+	glVertex2i(x0, y_0 + A / 2 + ot / 4);
+	glEnd();
+}
+void operY(int numq, int numop)
+{
+	double A = l / 2;
+	double b = l / 8;
+	double ot = l / 4;
+	double c = 3 * l / 16;
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	if (numq == 1) {
+		y_0 = 600 - verot - l;
+	}
+	if (numq == 2) {
+		y_0 = 100 + verot;
+	}
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + l);
+	glVertex2i(x0 + l, y_0 + l);
+	glVertex2i(x0 + l, y_0);
+	glEnd();
+
+	x0 = x0 + ot;
+	y_0 = y_0 + ot;
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0 + b, y_0);
+	glVertex2i(x0 + A, y_0 + A);
+	glVertex2i(x0 + A - b, y_0 + A);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0 + A);
+	glVertex2i(x0 + b, y_0 + A);
+	glVertex2i(x0 + A / 2, y_0 + 3 * l / 10);
+	glVertex2i(x0 + c, y_0 + A / 2);
+	glEnd();
+}
+void operZ(int numq, int numop)
+{
+	double A = l / 2;
+	double b = l / 8;
+	double c = 3 * l / 16;
+	double ot = l / 4;
+
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	if (numq == 1) {
+		y_0 = 600 - verot - l;
+	}
+	if (numq == 2) {
+		y_0 = 100 + verot;
+	}
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + l);
+	glVertex2i(x0 + l, y_0 + l);
+	glVertex2i(x0 + l, y_0);
+	glEnd();
+
+	x0 = x0 + ot;
+	y_0 = y_0 + ot;
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0 + b / 2);
+	glVertex2i(x0 + b / 2, y_0 + b / 2);
+	glVertex2i(x0 + A, y_0 + A - b / 2);
+	glVertex2i(x0 + A - b / 2, y_0 + A - b / 2);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + b / 2);
+	glVertex2i(x0 + A, y_0 + b / 2);
+	glVertex2i(x0 + A, y_0);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0 + A - b / 2);
+	glVertex2i(x0, y_0 + A);
+	glVertex2i(x0 + A, y_0 + A);
+	glVertex2i(x0 + A, y_0 + A - b / 2);
+	glEnd();
+}
+void operA(int numq, int numop)
+{
+	double A = l / 2;
+	double b = l / 8;
+	double c = 3 * l / 16;
+	double ot = l / 4;
+
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	if (numq == 1) {
+		y_0 = 600 - verot - l;
+	}
+	if (numq == 2) {
+		y_0 = 100 + verot;
+	}
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + l);
+	glVertex2i(x0 + l, y_0 + l);
+	glVertex2i(x0 + l, y_0);
+	glEnd();
+
+	x0 = x0 + ot;
+	y_0 = y_0 + ot;
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0 + b, y_0);
+	glVertex2i(x0 + A / 2 + b / 2, y_0 + A);
+	glVertex2i(x0 + A / 2 - b / 2, y_0 + A);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0 + A, y_0);
+	glVertex2i(x0 - b + A, y_0);
+	glVertex2i(x0 + A / 2 - b / 2, y_0 + A);
+	glVertex2i(x0 + A / 2 + b / 2, y_0 + A);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0 + b, y_0 + b);
+	glVertex2i(x0 + b, y_0 + 3 * b / 2);
+	glVertex2i(x0 + A - b, y_0 + 3 * b / 2);
+	glVertex2i(x0 + A - b, y_0 + b);
+	glEnd();
+}
+void operP(int numq, int numop)
+{
+	double A = l / 2;
+	double b = l / 8;
+	double c = 3 * l / 16;
+	double ot = l / 4;
+	double R = A / 3;
+	int i;
+
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	if (numq == 1) {
+		y_0 = 600 - verot - l;
+	}
+	if (numq == 2) {
+		y_0 = 100 + verot;
+	}
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0, y_0);
+	glVertex2i(x0, y_0 + l);
+	glVertex2i(x0 + l, y_0 + l);
+	glVertex2i(x0 + l, y_0);
+	glEnd();
+
+	x0 = x0 + ot;
+	y_0 = y_0 + ot;
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex2i(x0 + b / 2, y_0);
+	glVertex2i(x0 + 2 * b / 2, y_0);
+	glVertex2i(x0 + 2 * b / 2, y_0 + A);
+	glVertex2i(x0 + b / 2, y_0 + A);
+	glEnd();
+
+	int m = 50;
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0.0, 0.0, 0.0);
+	for (i = 0; i <= m; i++)
+	{
+		glVertex2i(x0 + b + (R + R / 2)*sin(M_PI / m * i), y_0 + A * 2 / 3 + R*cos(M_PI / m * i));
+	}
+	glEnd();
+}
+void operCNOT(int numop)
+{
+	double b = l / 8;
+	int i;
+	int m = 100;
+	x0 = 100 + l*(numop - 1)*(1 + alph);
+
+	glBegin(GL_LINES);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex2i(x0 + l / 2, 100 + l / 2 + verot);
+	glVertex2i(x0 + l / 2, 600 - l / 2 - verot);
+	glEnd();
+
+	glBegin(GL_TRIANGLE_FAN);
+	glColor3f(1.0, 1.0, 1.0);
+	for (i = 0; i <= m; i++)
+	{
+		glVertex2i(x0 + l / 2 + b*cos(2 * M_PI*i / m) / 2, 600 - l / 2 - verot + b*sin(2 * M_PI*i / m) / 2);
+	}
+	glEnd();
+
+	glBegin(GL_TRIANGLE_FAN);
+	glColor3f(0.0, 0.0, 0.0);
+	for (i = 0; i <= m; i++)
+	{
+		glVertex2i(x0 + l / 2 + b*cos(2 * M_PI*i / m) / 2, 100 + l / 2 + verot + b*sin(2 * M_PI*i / m) / 2);
+	}
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	for (i = 0; i <= m; i++)
+	{
+		glVertex2i(x0 + l / 2 + b*cos(2 * M_PI*i / m) / 2, 100 + l / 2 + verot + b*sin(2 * M_PI*i / m) / 2);
+	}
+	glEnd();
+
+}
